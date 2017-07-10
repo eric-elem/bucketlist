@@ -1,6 +1,5 @@
 body {
     background-color: #D9D9D9;
-    padding-top: 100px;
     font-family: Arial;
 }
 
@@ -9,6 +8,7 @@ body {
     width: fit-content;
     border: 2px ridge;
     margin: auto;
+    margin-top: 100px;
 }
 
 .header {
@@ -28,4 +28,54 @@ td {
 
 button {
     padding: 2px 27px;
+}
+
+.lists_container {
+    width: 48.5%;
+    display: inline-block;
+    margin: 0.5%;
+    background-color: #FFFFFF;
+    border: 2px ridge;
+}
+
+.lists_header {
+    background-color: #4484CE;
+    color: #FFFFFF;
+    padding: 0px 20px;
+    border-bottom: 2px ridge;
+}
+
+.actions {
+    vertical-align: top;
+    text-align: right;
+    padding-left: 20px;
+}
+
+.username_logout {
+    float: right;
+    margin-top: 7px;
+}
+
+.lists_container h1 {
+    display: inline-block;
+}
+
+.lists_container h3 {
+    display: inline-block;
+}
+
+.lists_container button {
+    display: inline-block;
+}
+
+.lists {    
+    overflow-y: scroll;
+}
+
+select {
+    text-align: right;
+}
+
+.bottom_form {
+    padding-top: 20px;
 }
