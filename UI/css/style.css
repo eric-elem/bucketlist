@@ -1,81 +1,39 @@
-body {
-    background-color: #D9D9D9;
-    font-family: Arial;
-}
-
-.center_container {
-    background-color: #FFFFFF;
-    width: fit-content;
-    border: 2px ridge;
-    margin: auto;
+.content {
+    width: 360px;
+    margin: 10px auto;
     margin-top: 100px;
-}
-
-.header {
-    background-color: #4484CE;
-    border-bottom: 2px ridge;
-    padding: 10px 30px;
-    color: #FFFFFF;
-}
-
-table {
-    padding: 30px 90px;
-}
-
-td {
     padding-bottom: 10px;
+    background-color: #F5F5F5;
 }
 
-button {
-    padding: 2px 27px;
+h3 {
+    text-align: center;
+    color: #888888;
 }
 
-.lists_container {
-    width: 48.5%;
-    display: inline-block;
-    margin: 0.5%;
-    background-color: #FFFFFF;
-    border: 2px ridge;
+.form-item {
+    margin: 5px 0;
 }
 
-.lists_header {
-    background-color: #4484CE;
-    color: #FFFFFF;
-    padding: 0px 20px;
-    border-bottom: 2px ridge;
+.reg-link {
+    text-align: center;
+    display: block;
 }
 
-.actions {
-    vertical-align: top;
-    text-align: right;
-    padding-left: 20px;
+form {
+    padding: 5px 20px;
 }
 
-.username_logout {
-    float: right;
-    margin-top: 7px;
+.list {
+    margin: 0 100px;
 }
 
-.lists_container h1 {
-    display: inline-block;
+.logout {
+    margin-right: 20px;
 }
 
-.lists_container h3 {
-    display: inline-block;
-}
-
-.lists_container button {
-    display: inline-block;
-}
-
-.lists {    
-    overflow-y: scroll;
-}
-
-select {
-    text-align: right;
-}
-
-.bottom_form {
-    padding-top: 20px;
+.heading {
+    padding-right: 20px;
+    vertical-align: middle;
+    margin-bottom: 20px;
 }
