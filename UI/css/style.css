@@ -28,6 +28,12 @@ form {
     margin: 0 100px;
 }
 
-p {
+.logout {
+    margin-right: 20px;
+}
+
+.heading {
     padding-right: 20px;
+    vertical-align: middle;
+    margin-bottom: 20px;
 }
