@@ -37,3 +37,8 @@ form {
     vertical-align: middle;
     margin-bottom: 20px;
 }
+
+.list-add-row{
+    display: inline-block;
+    width: 80%;
+}

@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bucketlist</title>
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/style.css" rel="stylesheet">
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/css/style.css" rel="stylesheet">
 	<link rel="shortcut icon" href="../images/favicon.ico" />
 </head>
 
@@ -26,25 +26,25 @@
     </nav>
     <div class="list-group list">
         <a href="#" class="list-group-item active">
-            <span class="badge">Actions</span><b>Things I should do before I am 20 years old</b></a>
-        <a href="#" class="list-group-item">
-            <span class="badge glyphicon glyphicon-plus" aria-hidden="true"> </span> 
-            <b>Select the add action on the right to create a new item</b></a>
-        <a href="#" class="list-group-item list-group-item-success">
-            <span class="badge glyphicon glyphicon-pencil" aria-hidden="true"> </span>
-            <span class="badge glyphicon glyphicon-trash" aria-hidden="true"> </span> 
-            <span class="badge glyphicon glyphicon-ban-circle" aria-hidden="true"> </span>
-            Through with O level studies</a>
-        <a href="#" class="list-group-item">
-            <span class="badge glyphicon glyphicon-pencil" aria-hidden="true"> </span>
-            <span class="badge glyphicon glyphicon-trash" aria-hidden="true"> </span>
-            <span class="badge glyphicon glyphicon-ok" aria-hidden="true"> </span> 
-            Learn how to drive</a>
-        <a href="#" class="list-group-item">
-            <span class="badge glyphicon glyphicon-pencil" aria-hidden="true"> </span>
-            <span class="badge glyphicon glyphicon-trash" aria-hidden="true"> </span> 
-            <span class="badge glyphicon glyphicon-ok" aria-hidden="true"> </span>
-            Enroll into university</a>
+            <span class="badge">Actions</span><b>{{bucket}}</b></a>
+        <form method="POST" action="/items/{{bucket}}">
+        <div class="list-group-item">       
+            <input type="text" name="itemname" class="form-control list-add-row" placeholder="Enter item name here and click the add action on the right to add it to this bucket" required>
+            <button type="submit" class="btn btn-default">Add</button>
+      </div>
+       </form>
+       <div class="list-group-item">
+        {% for key, value in items.iteritems() %}
+        <a class="list-item" href="/items" >{{key}}</a>        
+        <span class="badge glyphicon glyphicon-pencil" aria-hidden="true"> </span>
+        <span class="badge glyphicon glyphicon-trash" aria-hidden="true"> </span>
+        {% if value.status=='Pending'%}
+        <span class="badge glyphicon glyphicon-ok" aria-hidden="true"> </span>
+        {% else%}
+        <span class="badge glyphicon glyphicon-ban-circle" aria-hidden="true"> </span>  
+        {% endif %}          
+        {% endfor %}
+       </div>
     </div>
 </body>
 
