@@ -38,7 +38,19 @@ form {
     margin-bottom: 20px;
 }
 
-.list-add-row{
+.list-add-row {
     display: inline-block;
     width: 80%;
+}
+
+.item-action {
+    float: right;
+}
+
+.list-name {
+    text-decoration: none !important;
+}
+
+.status {
+    width: 5%;
 }
