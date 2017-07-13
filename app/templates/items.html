@@ -33,18 +33,13 @@
             <button type="submit" class="btn btn-default">Add</button>
       </div>
        </form>
-       <div class="list-group-item">
         {% for key, value in items.iteritems() %}
-        <a class="list-item" href="/items" >{{key}}</a>        
-        <span class="badge glyphicon glyphicon-pencil" aria-hidden="true"> </span>
-        <span class="badge glyphicon glyphicon-trash" aria-hidden="true"> </span>
-        {% if value.status=='Pending'%}
-        <span class="badge glyphicon glyphicon-ok" aria-hidden="true"> </span>
-        {% else%}
-        <span class="badge glyphicon glyphicon-ban-circle" aria-hidden="true"> </span>  
-        {% endif %}          
+        <a href="#" class="list-group-item">
+            <span class="badge glyphicon glyphicon-pencil" aria-hidden="true"> </span>
+            <span class="badge glyphicon glyphicon-trash" aria-hidden="true"> </span> 
+            <span class="badge glyphicon glyphicon-ok" aria-hidden="true"> </span>
+            {{key}}</a>
         {% endfor %}
-       </div>
     </div>
 </body>
 
