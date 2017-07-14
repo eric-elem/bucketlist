@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bucketlist</title>
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/css/style.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../images/favicon.ico" />
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    Bucketlist
+                </a>                
+            </div>
+            <a class="navbar-text navbar-right logout" href="/logout">
+                    Logout
+                </a>
+        </div>
+    </nav>
+
+    <div class="list-group list">
+        <a href="#" class="list-group-item active">My Buckets</b></a>
+        
+            {% if bucket!=None %}    
+            <form method="POST" action="/lists/{{bucket}}">
+            <div class="list-group-item">   
+            <input type="text" name="listname" class="form-control list-add-row" value="{{bucket}}" required/>
+            <input type="submit" class="btn btn-default" name="submit" value="Save"/>
+            {% else %}
+            <form method="POST" action="/lists">
+            <div class="list-group-item">
+            <input type="text" name="listname" class="form-control list-add-row" placeholder="Enter bucket name here and click the add action on the right to create a new bucket" required/>
+            <input type="submit" class="btn btn-default" name="submit" value="Add" />
+            {% endif %}
+      </div>
+       </form>
+       {% if buckets!=None %}
+       {% for key, value in buckets.iteritems() %}
+       <div class="list-group-item">                   
+            <a href="/lists/{{key}}/delete"><span class="glyphicon glyphicon-trash item-action" aria-hidden="true"> </span></a>
+            <a href="/lists/{{key}}/edit"><span class="glyphicon glyphicon-pencil item-action" aria-hidden="true"> </span></a>            
+            <a href="/items/{{key}}" class="">{{key}}</a>
+       </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+</body>
+
+</html>
